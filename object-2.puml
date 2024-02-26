@@ -1,0 +1,23 @@
+@startuml
+object course {
+name = "CS 4800"
+Instructor = instructor
+Textbook = textbook
+}
+
+object instructor {
+firstName = "Nima"
+lastName = "Davarpanah"
+officeNumber = "3-2636"
+}
+
+object textbook {
+title = "Clean Code"
+author = "Robert C. Martin"
+publisher = "Pearson"
+}
+
+course o-- instructor
+course o-- textbook
+
+@enduml

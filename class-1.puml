@@ -1,0 +1,50 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Employee {
+-firstName: String
+-lastName: String
+-ssn: String
++getFirstName(): String
++getLastName(): String
++getSsn(): String
++setFirstName(name: String): void
++setLastName(name: String): void
++setSsn(ssn: String): void
+}
+
+class SalariedEmployee {
+-weeklySalary: int
++getWeeklySalary(): int
++setWeeklySalary(weeklySalary: int): void
+}
+SalariedEmployee <|-- Employee
+
+class HourlyEmployee {
+-wage: int
+-hoursWorked: int
++getWage(): int
++getHoursWorked(): int
++setWage(wage: int): void
++setHoursWorked(hoursWorked: int): void
+}
+HourlyEmployee <|-- Employee
+
+class CommissionEmployee {
+-commissionRate: double
+-grossSales: int
++getCommissionRate(): double
++getGrossSales(): int
++setCommissionRate(commissionRate: double): void
++setGrossSales(grossSales: int): void
+}
+CommissionEmployee <|-- Employee
+
+class BaseEmployee {
+-baseSalary: int
++getBaseSalary(): int
++setBaseSalary(baseSalary: int): void
+}
+BaseEmployee <|-- Employee
+
+@enduml

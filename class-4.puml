@@ -1,0 +1,20 @@
+@startuml
+class Folder {
+-name: String
+-subFolders: List<Folder>
+-containedFiles: List<File>
++getName(): String
++setName(name: String): void
++addSubFolder(parentName: String, folderName: String): void
++addFile(parentName: String, fileName: String): void
++print(): void
+}
+
+class File {
+-name: String
++getName(): String
++setName(name: String): void
++print(): void
+}
+File *-- Folder
+@enduml
